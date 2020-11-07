@@ -1887,16 +1887,16 @@ SceneManager.initialize = function() {
 
 SceneManager.checkBrowser = function() {
     if (!Utils.canUseWebGL()) {
-        throw new Error("Your browser does not support WebGL.");
+        throw new Error("Ваш браузер не поддерживает WebGL.");
     }
     if (!Utils.canUseWebAudioAPI()) {
-        throw new Error("Your browser does not support Web Audio API.");
+        throw new Error("Ваш браузер не поддерживает Web Audio API.");
     }
     if (!Utils.canUseCssFontLoading()) {
-        throw new Error("Your browser does not support CSS Font Loading.");
+        throw new Error("Ваш браузер не поддерживает CSS Font Loading.");
     }
     if (!Utils.canUseIndexedDB()) {
-        throw new Error("Your browser does not support IndexedDB.");
+        throw new Error("Ваш браузер не поддерживает IndexedDB.");
     }
 };
 
@@ -1906,7 +1906,7 @@ SceneManager.checkPluginErrors = function() {
 
 SceneManager.initGraphics = function() {
     if (!Graphics.initialize()) {
-        throw new Error("Failed to initialize graphics.");
+        throw new Error("Неудаётся инициализировать графику.");
     }
     Graphics.setTickHandler(this.update.bind(this));
 };
